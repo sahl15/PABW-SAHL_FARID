@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyTraning — Catatan Latihan</title>
+        
+        <!-- Urutan Pemanggilan CSS P5 -->
+        <link rel="stylesheet" href="token.css">
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet" href="komponen.css">
+        <link rel="stylesheet" href="tema.css">
+        <link rel="stylesheet" href="responsif.css">
+    </head>
+    <body>
+        <div class="page">
+        <header>
+            <input type="checkbox" id="tema" class="pengalih-tema">
+            <label for="tema" class="tombol-tema">Mode Gelap</label>
+
+            <div class="header-baris">
+                <h1>MyTraning<span class="aksen">.</span></h1>
+                <nav aria-label="Navigasi utama">
+                    <ul>
+                        <li><a href="#bagian-1">Jadwal Latihan</a></li>
+                        <li><a href="#bagian-2">Catat Latihan</a></li>
+                        <li><a href="#tentang">Profil Latihan</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="tagline">Catat latihan, jaga konsistensi, dan pantau perjalanan latihanmu.</p>
+        </header>
+
+        <main class="isi">
+            <section id="bagian-1" class="sisi">
+                <h2>Rencana Latihan Mingguan</h2>
+                
+                <div class="katalog">
+                    <div class="kartu">
+                        <div class="kartu__isi">
+                            <h3>Selasa</h3>
+                            <p><strong>Jenis:</strong> Lari ringan</p>
+                            <p><strong>Durasi:</strong> 30 menit</p>
+                            <p><strong>Target:</strong> 4 km</p>
+                        </div>
+                        <div class="kartu__kaki"><span>Target 4 km</span><span>30 menit</span></div>
+                    </div>
+                    <div class="kartu">
+                        <div class="kartu__isi">
+                            <h3>Kamis</h3>
+                            <p><strong>Jenis:</strong> Interval</p>
+                            <p><strong>Durasi:</strong> 25 menit</p>
+                            <p><strong>Target:</strong> 5 x 400 meter</p>
+                        </div>
+                        <div class="kartu__kaki"><span>5 x 400 m</span><span>25 menit</span></div>
+                    </div>
+                    <div class="kartu">
+                        <div class="kartu__isi">
+                            <h3>Minggu</h3>
+                            <p><strong>Jenis:</strong> Lari jarak jauh</p>
+                            <p><strong>Durasi:</strong> 50 menit</p>
+                            <p><strong>Target:</strong> 7 km</p>
+                        </div>
+                        <div class="kartu__kaki"><span>Target 7 km</span><span>50 menit</span></div>
+                    </div>
+                </div>
+
+                <figure>
+                    <img src="https://image.idntimes.com/post/20240604/1000002248-48dd344493874130fba108ffa4c8d145-751cdcfbf47b8a90865ccea0e301a002.jpg" alt="Dokter Tirta sedang berlari" width="640" height="360" loading="lazy">
+                    <figcaption>Dokter Tirta saat berlari</figcaption>
+                </figure>
+            </section>
+
+            <!-- Bagian Form Catat Latihan dengan Aksesibilitas Lengkap -->
+            <section id="bagian-2" class="utama" aria-labelledby="judul-catat-latihan">
+                <h2 id="judul-catat-latihan" tabindex="0">Catat Latihan</h2>
+                <form action="#" method="get">
+                    <div class="form-kolom">
+                        <label for="jenis-latihan">Jenis latihan</label>
+                        <input type="text" id="jenis-latihan" name="jenis-latihan" required>
+                        <span class="pesan-galat">Jenis latihan wajib diisi!</span>
+                    </div>
+                    <div class="form-kolom">
+                        <label for="tanggal-latihan">Tanggal latihan</label>
+                        <input type="date" id="tanggal-latihan" name="tanggal-latihan" required>
+                        <span class="pesan-galat">Tanggal latihan wajib diisi!</span>
+                    </div>
+                    <div class="form-kolom">
+                        <label for="durasi-latihan">Durasi latihan (menit)</label>
+                        <input type="number" id="durasi-latihan" name="durasi-latihan" min="1" max="300" required>
+                        <span class="pesan-galat">Durasi harus antara 1-300 menit!</span>
+                    </div>
+                    <button type="submit">Simpan Latihan</button>
+                </form>
+            </section>
+        </main>
+
+        <footer id="tentang">
+            <div class="footer-brand"><strong>MyTraning.</strong><span>Personal Training Tracker</span></div>
+            <div class="footer-info">
+                <p><strong>Nama:</strong> Sahl farid</p>
+                <p><strong>NIM:</strong> 25523251</p>
+                <p><strong>Program Studi:</strong> Informatika</p>
+            </div>
+
+
+        </footer>
+        </div>
+    </body>
+</html>

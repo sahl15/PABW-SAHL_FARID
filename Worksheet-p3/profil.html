@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rencana Latihan Lari Saya - Sahl Farid</title>
+    </head>
+    <body>
+        <header>
+            <h1>Rencana Latihan Lari Saya</h1>
+            <p>Catatan jadwal latihan dan target lari Sahl Farid.</p>
+            <nav aria-label="Navigasi utama">
+                <ul>
+                    <li><a href="#bagian-1">Jadwal Latihan</a></li>
+                    <li><a href="#bagian-2">Catat Latihan</a></li>
+                    <li><a href="#tentang">Tentang Saya</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="bagian-1">
+                <h2>Jadwal Latihan Mingguan</h2>
+                <table>
+                    <caption>Rencana latihan lari Sahl Farid</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Hari</th>
+                            <th scope="col">Jenis Latihan</th>
+                            <th scope="col">Durasi</th>
+                            <th scope="col">Target</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Selasa</th>
+                            <td>Lari ringan</td>
+                            <td>30 menit</td>
+                            <td>4 km</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Kamis</th>
+                            <td>Interval</td>
+                            <td>25 menit</td>
+                            <td>5 x 400 meter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Minggu</th>
+                            <td>Lari jarak jauh</td>
+                            <td>50 menit</td>
+                            <td>7 km</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&amp;fit=crop&amp;w=640&amp;h=360&amp;q=80" alt="Seorang pelari berlatih di jalan pada pagi hari" width="640" height="360" loading="lazy">
+                    <figcaption>Lari teratur membantu menjaga kebugaran tubuh.</figcaption>
+                </figure>
+            </section>
+
+            <section id="bagian-2">
+                <h2>Catat Latihan Hari Ini</h2>
+                <form action="/simpan" method="post">
+                    <p>
+                        <label for="jenis-latihan">Jenis latihan</label>
+                        <input type="text" id="jenis-latihan" name="jenis-latihan" required>
+                    </p>
+                    <p>
+                        <label for="tanggal-latihan">Tanggal latihan</label>
+                        <input type="date" id="tanggal-latihan" name="tanggal-latihan" required>
+                    </p>
+                    <p>
+                        <label for="durasi-latihan">Durasi latihan (menit)</label>
+                        <input type="number" id="durasi-latihan" name="durasi-latihan" min="1" max="300" required>
+                    </p>
+                    <button type="submit">Simpan Latihan</button>
+                </form>
+            </section>
+        </main>
+
+        <footer id="tentang">
+            <p>Sahl Farid | NIM 25523251 | 23/09/2026</p>
+        </footer>
+    </body>
+</html>

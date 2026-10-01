@@ -1,0 +1,59 @@
+header {
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--section-gap);
+}
+
+.header-baris {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2);
+}
+
+nav ul {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover { text-decoration: underline; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+.katalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.kartu {
+  flex: 1 1 16rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  padding: var(--card-pad);
+}
+
+footer {
+  margin-top: var(--section-gap);
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-fg);
+  font-size: var(--text-sm);
+}

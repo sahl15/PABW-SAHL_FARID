@@ -1,0 +1,42 @@
+/* Pengalih Tema Tombol Manual */
+.pengalih-tema {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tombol-tema {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  margin-bottom: var(--space-2);
+}
+
+/* Otomatis Sistem */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:      #0F172A;
+    --color-fg:      #E2E8F0;
+    --color-surface: #1E293B;
+    --color-border:  #334155;
+    --color-primary: #60A5FA;
+    --color-danger:  #F87171;
+    --color-focus:   #FBBF24;
+    --shadow-1:      0 1px 3px rgba(0, 0, 0, .45);
+  }
+}
+
+/* Pengalih Manual Overwrite */
+:root:has(#tema:checked) {
+  --color-bg:      #0F172A;
+  --color-fg:      #E2E8F0;
+  --color-surface: #1E293B;
+  --color-border:  #334155;
+  --color-primary: #60A5FA;
+  --color-danger:  #F87171;
+  --color-focus:   #FBBF24;
+}
