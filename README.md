@@ -121,3 +121,41 @@ worksheet-p6/
 
 mengubah gambar sebelumnya menjadi gambarnya dokter tirta yang sedang berlalri, dan memperbaiki mode malam dan mode terang sebeluymnya yang tidak berfungsi
 
+
+
+
+
+
+#  Pertemuan 8
+Pada Pertemuan 8, saya mengembangkan halaman profil dengan menggunakan JavaScript Modern ES6+, struktur data, dan array methods.
+
+## Tujuan
+- Menggunakan `const` dan `let`
+- Menggunakan object dan array
+- Membuat fungsi murni
+- Menggunakan template literal
+- Menggunakan `map`, `filter`, dan `find`
+- Membaca dan menangani error melalui Console
+
+## Data Profil
+Data halaman disimpan di JavaScript menggunakan variabel dan object, bukan ditulis langsung di HTML.
+
+## Fungsi
+Saya membuat minimal dua fungsi murni untuk mengolah data profil dan daftar keahlian.
+
+## Array Methods
+Array methods yang digunakan:
+- `map()` untuk mengubah data
+- `filter()` untuk menyaring data
+- `find()` untuk mencari data yang sesuai
+
+## Debugging
+Saya menggunakan `console.log()` dan `console.table()` untuk memeriksa data serta membaca error pada Console.
+
+## Penggunaan AI
+AI digunakan sebagai bantuan dalam memahami materi, menyusun kode, dan membantu mengecek kesalahan. Saya tetap memahami dan memeriksa kode yang digunakan dalam pekerjaan ini.
+
+## Kesimpulan
+Pada Pertemuan 8 saya belajar mengelola data halaman menggunakan JavaScript sehingga data dapat dipisahkan dari struktur HTML dan diolah menggunakan fungsi serta array methods.
+
+

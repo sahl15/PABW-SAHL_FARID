@@ -1,0 +1,12 @@
+/* P6 — Responsif Mobile-First */
+.page { min-height: calc(100dvh - 2rem); }
+.isi { display: grid; grid-template-columns: 1fr; gap: var(--space-6); }
+.katalog { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
+.header-baris { flex-direction: column; align-items: flex-start; }
+nav ul { flex-wrap: wrap; gap: .25rem; }
+img { max-width: 100%; height: auto; }
+.kartu, .sisi, .utama, #bagian-1, #bagian-2, .form-kolom { min-width: 0; }
+.kartu__isi, p, h1, h2, h3, label { overflow-wrap: anywhere; }
+@media (max-width: 47.99rem) { body { padding: .75rem; } header { padding-top: 3.5rem; } .header-baris { gap: var(--space-4); } nav ul { width: 100%; } nav a { padding-inline: .65rem; } .isi { padding-block: var(--space-6); } .kartu { min-height: 13rem; } form { padding: var(--space-4); } .tombol-tema { top: -2.7rem; right: 0; } footer { flex-direction: column; align-items: flex-start; gap: 1rem; } .footer-info { text-align: left; } }
+@media (min-width: 48rem) { .katalog { grid-template-columns: repeat(2, 1fr); } .header-baris { flex-direction: row; align-items: center; } }
+@media (min-width: 60rem) { .katalog { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
