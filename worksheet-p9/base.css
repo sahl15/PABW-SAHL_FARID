@@ -1,0 +1,21 @@
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { font-size: 100%; scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+body {
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: var(--text-md); line-height: 1.6; color: var(--color-fg);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(199,167,108,.15), transparent 25rem),
+    radial-gradient(circle at 92% 25%, rgba(41,76,111,.09), transparent 30rem),
+    var(--color-bg);
+  padding: var(--space-4); -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+h1 { font-size: var(--text-3xl); line-height: .98; letter-spacing: -.055em; }
+h2 { font-size: var(--text-xl); line-height: 1.25; margin-bottom: var(--space-3); letter-spacing: -.025em; }
+h3 { font-size: 1.15rem; margin-bottom: var(--space-2); }
+p { color: var(--color-muted); }
+main p { max-width: 60ch; }
+a, button, input { transition: 180ms ease; }
+.aksen { color: var(--gold-500); }
+.tagline { font-size: 1.02rem; max-width: 44rem; }

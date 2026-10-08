@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title id="judul-halaman">MyTraning — Catatan Latihan</title>
+        
+        <!-- Urutan Pemanggilan CSS P5 -->
+        <link rel="stylesheet" href="token.css">
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet" href="komponen.css">
+        <link rel="stylesheet" href="tema.css">
+        <link rel="stylesheet" href="responsif.css">
+    </head>
+    <body>
+        <div class="page">
+        <header>
+            <input type="checkbox" id="tema" class="pengalih-tema">
+            <label for="tema" class="tombol-tema"><span class="teks-tema" aria-live="polite"></span></label>
+
+            <div class="header-baris">
+                <h1>MyTraning<span class="aksen">.</span></h1>
+                <nav aria-label="Navigasi utama">
+                    <ul>
+                        <li><a href="#bagian-1">Riwayat Latihan</a></li>
+                        <li><a href="#bagian-2">Catat Latihan</a></li>
+                        <li><a href="#tentang">Profil Latihan</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="tagline" id="perkenalan-profil">Catat latihan, jaga konsistensi, dan pantau perjalanan latihanmu.</p>
+        </header>
+
+        <main class="isi">
+            <section id="bagian-1" class="sisi">
+                <h2>Riwayat Latihan</h2>
+                <div class="katalog" id="daftar"></div>
+                <p id="pesan-kosong" hidden>Tidak ada riwayat latihan.</p>
+
+                <section class="galeri-latihan" aria-label="Foto riwayat latihan">
+                    <div class="galeri-kontrol" aria-label="Kontrol galeri">
+                        <button type="button" class="galeri-nav" id="galeri-sebelumnya" aria-label="Foto sebelumnya">‹</button>
+                        <button type="button" class="galeri-nav" id="galeri-berikutnya" aria-label="Foto berikutnya">›</button>
+                    </div>
+                    <div class="galeri" id="galeri" tabindex="0" aria-roledescription="carousel" aria-label="Foto olahraga">
+                        <div class="galeri-track">
+                            <figure class="slide is-active"><img src="assets/latihan/lari.jpg" alt="Lari" width="1800" height="1200" loading="eager"></figure>
+                            <figure class="slide"><img src="assets/latihan/padel.jpg" alt="Padel" width="1800" height="1350" loading="lazy"></figure>
+                            <figure class="slide"><img src="assets/latihan/renang.jpg" alt="Renang" width="1800" height="1200" loading="lazy"></figure>
+                            <figure class="slide"><img src="assets/latihan/badminton.jpg" alt="Badminton" width="1800" height="1706" loading="lazy"></figure>
+                            <figure class="slide"><img src="assets/latihan/tenis.jpg" alt="Tenis Lapangan" width="1800" height="1013" loading="lazy"></figure>
+                        </div>
+                        <div class="galeri-dots" aria-label="Pilih foto"></div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Bagian Form Catat Latihan dengan Aksesibilitas Lengkap -->
+            <section id="bagian-2" class="utama" aria-labelledby="judul-catat-latihan">
+                <h2 id="judul-catat-latihan" tabindex="0">Catat Latihan</h2>
+                <form id="form-latihan" action="#" method="get" novalidate>
+                    <div class="form-kolom">
+                        <label for="jenis-latihan">Jenis latihan</label>
+                        <input type="text" id="jenis-latihan" name="jenis-latihan" required>
+                        <span class="pesan-galat" id="error-jenis" hidden>Jenis latihan wajib diisi.</span>
+                    </div>
+                    <div class="form-kolom">
+                        <label for="tanggal-latihan">Tanggal latihan</label>
+                        <input type="date" id="tanggal-latihan" name="tanggal-latihan" required>
+                        <span class="pesan-galat" id="error-tanggal" hidden>Tanggal latihan wajib diisi.</span>
+                    </div>
+                    <div class="form-kolom">
+                        <label for="durasi-latihan">Durasi latihan (menit)</label>
+                        <input type="number" id="durasi-latihan" name="durasi-latihan" min="1" max="300" required>
+                        <span class="pesan-galat" id="error-durasi" hidden>Durasi harus antara 1–300 menit.</span>
+                    </div>
+                    <button type="submit">Simpan Latihan</button>
+                </form>
+            </section>
+        </main>
+
+        <footer id="tentang">
+            <div class="footer-brand"><strong>MyTraning.</strong><span>Personal Training Tracker</span></div>
+            <div class="footer-info">
+                <p><strong>Nama:</strong> <span id="nama-profil">-</span></p>
+                <p><strong>NIM:</strong> <span id="nim-profil">-</span></p>
+                <p><strong>Program Studi:</strong> <span id="peran-profil">-</span></p>
+            </div>
+            <div class="footer-info">
+                <p><strong>Keahlian:</strong> <span id="keahlian-profil">-</span></p>
+                <p><strong>Jumlah latihan:</strong> <span id="jumlah-proyek">-</span></p>
+                <p><strong>Bio:</strong> <span id="bio-profil">-</span></p>
+                
+        </footer>
+        </div>
+        <script type="module" src="js/app.js"></script>
+        <script type="module" src="js/dom.js"></script>
+    </body>
+</html>

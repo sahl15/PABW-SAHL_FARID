@@ -1,0 +1,47 @@
+/* P6 — Visual tokens: Runora premium editorial theme */
+:root {
+  --blue-700: #1D3557;
+  --blue-500: #294C6F;
+  --blue-400: #6E91B2;
+  --gold-500: #C7A76C;
+  --gold-300: #E3C995;
+  --gray-50: #F7F5F0;
+  --gray-100: #EEEAE2;
+  --gray-700: #667085;
+  --gray-900: #172033;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+
+  --radius-md: 0.8rem;
+  --radius-lg: 1.35rem;
+  --radius-full: 999px;
+
+  --shadow-1: 0 8px 24px rgba(23, 32, 51, .06);
+  --shadow-2: 0 20px 50px rgba(23, 32, 51, .11);
+
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-xl: 1.5rem;
+  --text-3xl: clamp(2.25rem, 5vw, 4rem);
+}
+
+:root {
+  --color-bg: var(--gray-50);
+  --color-fg: var(--gray-900);
+  --color-muted: var(--gray-700);
+  --color-surface: #FFFFFF;
+  --color-border: #E5E0D7;
+  --color-primary: var(--blue-700);
+  --color-primary-hover: #132A45;
+  --color-on-primary: #FFFFFF;
+  --color-danger: #B54747;
+  --color-focus: var(--gold-500);
+  --card-pad: var(--space-6);
+  --section-gap: var(--space-8);
+}

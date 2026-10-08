@@ -1,0 +1,167 @@
+figure { margin: 0; }
+.sisi figure { overflow: hidden; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-1); }
+.sisi figure img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; filter: saturate(.82) contrast(1.02); }
+.sisi figure:hover img { transform: scale(1.025); }
+figcaption { padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-muted); background: var(--color-surface); }
+.kartu { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: 15rem; background: rgba(255,255,255,.86); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-1); padding: var(--card-pad); overflow: hidden; isolation: isolate; }
+.kartu::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: linear-gradient(180deg, var(--gold-500), var(--blue-500)); }
+.kartu::after { content: ""; position: absolute; width: 8rem; height: 8rem; right: -4rem; top: -4rem; border-radius: 50%; background: rgba(199,167,108,.08); z-index: -1; }
+.kartu:hover { transform: translateY(-5px); border-color: rgba(199,167,108,.55); box-shadow: var(--shadow-2); }
+.kartu__isi { min-width: 0; }
+.kartu h3 { color: var(--color-fg); font-size: 1.35rem; letter-spacing: -.02em; }
+.kartu p { font-size: .92rem; margin-top: .35rem; }
+.kartu strong { color: var(--color-fg); }
+.kartu__kaki { margin-top: var(--space-4); font-size: var(--text-sm); display: flex; gap: .4rem; flex-wrap: wrap; }
+.kartu__kaki span { display: inline-flex; align-items: center; min-height: 1.9rem; padding: .25rem .65rem; border-radius: var(--radius-full); background: var(--gray-100); color: var(--color-muted); font-weight: 700; }
+form { display: flex; flex-direction: column; gap: var(--space-4); width: 100%; max-width: none; background: rgba(255,255,255,.9); padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-2); }
+.form-kolom { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+label { font-size: var(--text-sm); font-weight: 700; color: var(--color-fg); }
+input, select, textarea { width: 100%; min-width: 0; min-height: 2.8rem; font: inherit; padding: .65rem .8rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-fg); }
+input:hover, select:hover, textarea:hover { border-color: #C9B98F; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold-500); box-shadow: 0 0 0 4px rgba(199,167,108,.14); }
+button { width: 100%; min-height: 2.9rem; font: inherit; padding: .65rem var(--space-4); border: 1px solid transparent; border-radius: var(--radius-md); background: var(--color-primary); color: var(--color-on-primary); font-weight: 750; cursor: pointer; box-shadow: 0 8px 20px rgba(29,53,87,.18); letter-spacing: .01em; }
+button:hover { background: var(--color-primary-hover); transform: translateY(-2px); box-shadow: 0 12px 25px rgba(29,53,87,.23); }
+button:active { transform: translateY(0); }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+input:user-invalid { border-color: var(--color-danger); box-shadow: 0 0 0 3px rgba(181,71,71,.08); }
+.pesan-galat { display: none; color: var(--color-danger); font-size: var(--text-sm); }
+.form-kolom:has(input:user-invalid) .pesan-galat { display: block; }
+
+
+/* P9 — penanda filter aktif dan pesan validasi */
+#filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin-bottom: var(--space-3);
+}
+
+#filter .aktif {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.pesan-galat {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+/* P9+ — Galeri latihan interaktif */
+.galeri-latihan {
+    margin-top: var(--space-3);
+}
+.galeri-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-3);
+}
+.galeri-header h2 {
+    margin-top: .2rem;
+    margin-bottom: .25rem;
+}
+.galeri-header p {
+    font-size: var(--text-sm);
+    max-width: 54ch;
+}
+.eyebrow {
+    color: var(--gold-500);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+.galeri-kontrol {
+    display: flex;
+    gap: .5rem;
+    flex: 0 0 auto;
+}
+.galeri-nav {
+    width: 2.7rem;
+    min-width: 2.7rem;
+    min-height: 2.7rem;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+.galeri {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-2);
+    touch-action: pan-y;
+    user-select: none;
+}
+.galeri-track {
+    display: flex;
+    transition: transform 500ms cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+}
+.slide {
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    background: #111;
+}
+.slide img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(1.02) contrast(1.03);
+}
+.slide figcaption {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .05rem;
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+    padding: .7rem .9rem;
+    color: #fff;
+    background: rgba(10, 18, 31, .72);
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: .9rem;
+    backdrop-filter: blur(8px);
+}
+.slide figcaption strong { color: #fff; font-size: 1rem; }
+.slide figcaption span { color: rgba(255,255,255,.82); font-size: .8rem; }
+.galeri-dots {
+    position: absolute;
+    left: 50%;
+    bottom: .9rem;
+    display: flex;
+    gap: .45rem;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.galeri-dots .dot {
+    width: .62rem;
+    min-width: .62rem;
+    min-height: .62rem;
+    height: .62rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.55);
+    box-shadow: none;
+}
+.galeri-dots .dot.aktif {
+    width: 1.6rem;
+    border-radius: 999px;
+    background: #fff;
+}
+.tombol-tema .teks-tema { display: inline-block; }
+:root:has(#tema:checked) .slide figcaption { background: rgba(3, 8, 16, .78); }
+
+#filter button { flex: 1 1 8rem; width: auto; }
+#filter button.aktif { box-shadow: 0 0 0 2px var(--color-focus), 0 8px 20px rgba(29,53,87,.18); }

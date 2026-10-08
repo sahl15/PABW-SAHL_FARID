@@ -127,7 +127,6 @@ mengubah gambar sebelumnya menjadi gambarnya dokter tirta yang sedang berlalri, 
 
 
 #  Pertemuan 8
-Pada Pertemuan 8, saya mengembangkan halaman profil dengan menggunakan JavaScript Modern ES6+, struktur data, dan array methods.
 
 ## Tujuan
 - Menggunakan `const` dan `let`
@@ -155,7 +154,36 @@ Saya menggunakan `console.log()` dan `console.table()` untuk memeriksa data sert
 ## Penggunaan AI
 AI digunakan sebagai bantuan dalam memahami materi, menyusun kode, dan membantu mengecek kesalahan. Saya tetap memahami dan memeriksa kode yang digunakan dalam pekerjaan ini.
 
-## Kesimpulan
-Pada Pertemuan 8 saya belajar mengelola data halaman menggunakan JavaScript sehingga data dapat dipisahkan dari struktur HTML dan diolah menggunakan fungsi serta array methods.
 
 
+
+
+
+# PERTEMUAN 9 
+
+Pertemuan 9 merupakan lanjutan dari P8. Data latihan dari `js/app.js` dipasang ke halaman menggunakan DOM.
+
+### Yang dikerjakan
+- `querySelector` digunakan untuk mengambil elemen halaman.
+- `daftarProyek` dan `profil` diekspor dari `app.js`, lalu digunakan oleh `dom.js`.
+- Daftar latihan dibuat dari data menggunakan `createElement`, `textContent`, dan `append`.
+- Fungsi `render(data)` mengosongkan wadah sebelum menggambar ulang.
+- Filter kategori memakai satu event listener pada induk `#filter` dengan `event.target.closest("button")`.
+- Pesan keadaan kosong ditampilkan jika filter tidak menghasilkan data.
+- Form latihan memakai `preventDefault()`, `trim()`, `aria-invalid`, fokus ke kolom bermasalah, dan tombol submit dinonaktifkan sampai data layak.
+- Pesan validasi dibuat per kolom.
+
+### Daftar elemen P9
+
+| Bagian | Pemilih | Variabel |
+|---|---|---|
+| Daftar proyek | `#daftar` | `wadah` |
+| Tombol filter | `#filter` | `barisFilter` |
+| Pesan kosong | `#pesan-kosong` | `kosong` |
+| Form | `#form-latihan` | `form` |
+| Jenis latihan | `#jenis-latihan` | `jenis` |
+| Tanggal latihan | `#tanggal-latihan` | `tanggal` |
+| Durasi latihan | `#durasi-latihan` | `durasi` |
+
+### Penggunaan AI
+AI digunakan untuk membantu memahami instruksi P9, memeriksa struktur DOM dan event delegation, serta membantu merapikan kode. Topik halaman, data latihan, dan pemeriksaan hasil akhir tetap saya sesuaikan dengan project saya sendiri.
