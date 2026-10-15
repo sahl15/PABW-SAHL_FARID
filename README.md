@@ -227,5 +227,30 @@ Project memeriksa status respons sebelum membaca data. Jika permintaan gagal, pe
 ### Penggunaan AI
 AI digunakan sebagai alat bantu untuk memahami materi, menyusun kode, dan memeriksa kesalahan. Kode dan hasil akhir perlu diperiksa serta dipahami kembali sebelum dikumpulkan.
 
-### Penilaian Mandiri
-Nilai akhir penilaian mandiri: **85/100**.
+
+
+
+
+
+# pertemuan 11
+
+## Tentang
+Proyek ini membagi JavaScript menjadi lima modul agar kode lebih rapi dan mudah dikelola.
+
+## Struktur Modul
+- `data.js`: menyimpan data dan fungsi pemformat.
+- `state.js`: mengelola keadaan aplikasi.
+- `dom.js`: menampilkan halaman.
+- `events.js`: mengatur peristiwa seperti klik tombol.
+- `app.js`: menghubungkan semua modul.
+
+## Penyimpanan
+`localStorage` dan JSON digunakan untuk menyimpan pilihan kategori agar tetap ada setelah halaman dimuat ulang. Simpanan rusak atau versi lama ditangani dengan mengembalikan nilai bawaan.
+
+## Cara Menjalankan
+Buka `profil.html` melalui server lokal dan periksa Console di browser.
+
+## Deklarasi AI
+AI membantu menyusun README dan memberikan saran kode. Saya bertanggung jawab memeriksa, memahami, dan menguji hasil akhir proyek.
+
+
