@@ -187,3 +187,45 @@ Pertemuan 9 merupakan lanjutan dari P8. Data latihan dari `js/app.js` dipasang k
 
 ### Penggunaan AI
 AI digunakan untuk membantu memahami instruksi P9, memeriksa struktur DOM dan event delegation, serta membantu merapikan kode. Topik halaman, data latihan, dan pemeriksaan hasil akhir tetap saya sesuaikan dengan project saya sendiri.
+
+
+
+
+
+
+# Pertemuan 10
+
+## JavaScript Asinkron: fetch, Promise, dan JSON
+
+### Deskripsi
+Project ini merupakan lanjutan dari Pertemuan 9. Pada Pertemuan 10, halaman profil dikembangkan dengan mengambil data menggunakan `fetch`, membaca JSON, dan menampilkan data ke halaman web.
+
+### Fitur
+- Mengambil data menggunakan `fetch`.
+- Memeriksa status respons menggunakan `response.ok`.
+- Membaca data JSON menggunakan `response.json()`.
+- Menangani proses memuat, berhasil, gagal, dan data kosong.
+- Menggunakan `async/await` dan `try/catch` untuk menangani error.
+- Memisahkan pengambilan data di `js/api.js` dari tampilan di `js/app.js`.
+
+### Struktur File
+- `profil.html` — halaman profil.
+- File CSS — mengatur tampilan halaman.
+- `js/app.js` — mengatur tampilan dan proses pemanggilan data.
+- `js/dom.js` — mengelola elemen DOM.
+- `js/api.js` — mengambil dan memeriksa data dari API.
+
+### Cara Menjalankan
+1. Buka folder project di VS Code.
+2. Jalankan halaman menggunakan server lokal, misalnya Live Server.
+3. Buka halaman di browser.
+4. Periksa hasilnya melalui Console dan Network pada Developer Tools.
+
+### Penanganan Error
+Project memeriksa status respons sebelum membaca data. Jika permintaan gagal, pesan error ditampilkan pada halaman. Jika data kosong, halaman menampilkan informasi bahwa belum ada data.
+
+### Penggunaan AI
+AI digunakan sebagai alat bantu untuk memahami materi, menyusun kode, dan memeriksa kesalahan. Kode dan hasil akhir perlu diperiksa serta dipahami kembali sebelum dikumpulkan.
+
+### Penilaian Mandiri
+Nilai akhir penilaian mandiri: **85/100**.
